@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Navigations from "./components/Navigations";
+import Navigations from "./_components/Navigations";
 export default function Home() {
   return (
     <>
