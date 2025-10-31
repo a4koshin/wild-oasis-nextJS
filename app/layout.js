@@ -1,7 +1,7 @@
-import Navigations from "@/starter/components/Navigation";
+import Navigations from "@/app/_components/Navigations";
 import Logo from "@/app/_components/Logo";
 import "@/app/_styles/globals.css";
-
+import Header from "@/app/_components/Header";
 import { Josefin_Sans } from "next/font/google";
 
 const josefin = Josefin_Sans({
@@ -21,11 +21,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${josefin.className} bg-primary-950 text-primary-100 min-h-screen`}
+        className={`${josefin.className} antialiased bg-primary-950 text-primary-100 min-h-screen flex flex-col`}
       >
-        <Logo />
-        <Navigations />
-        {children}
+        <Header />
+        <div className="flex-1 px-4 py-8">
+          <main className="max-w-7xl mx-auto bg-red-500">{children}</main>
+        </div>
       </body>
     </html>
   );
