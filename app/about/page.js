@@ -1,3 +1,8 @@
+import Link from "next/link";
+import about1 from "@/public/about-1.jpg";
+import about2 from "@/public/about-2.jpg";
+import Image from "next/image";
+
 export default function Page() {
   return (
     <div className="grid grid-cols-5 gap-x-24 gap-y-32 text-lg items-center">
@@ -29,14 +34,19 @@ export default function Page() {
       </div>
 
       <div className="col-span-2">
-        <img
-          src="/about-1.jpg"
+        <Image
+          src={about1}
+          quality={80}
           alt="Family sitting around a fire pit in front of cabin"
         />
       </div>
 
       <div className="col-span-2">
-        <img src="/about-2.jpg" alt="Family that manages The Wild Oasis" />
+        <Image
+          src={about2}
+          quality={80}
+          alt="Family that manages The Wild Oasis"
+        />
       </div>
 
       <div className="col-span-3">
@@ -52,21 +62,21 @@ export default function Page() {
             dedication to creating a warm, welcoming environment.
           </p>
           <p>
-            Over the years, we've maintained the essence of The Wild Oasis,
+            Over the years, we&apos;ve maintained the essence of The Wild Oasis,
             blending the timeless beauty of the mountains with the personal
-            touch only a family business can offer. Here, you're not just a
-            guest; you're part of our extended family. So join us at The Wild
-            Oasis soon, where tradition meets tranquility, and every visit is
-            like coming home.
+            touch only a family business can offer. Here, you&apos;re not just a
+            guest; you&apos;re part of our extended family. So join us at The
+            Wild Oasis soon, where tradition meets tranquility, and every visit
+            is like coming home.
           </p>
 
           <div>
-            <a
+            <Link
               href="/cabins"
               className="inline-block mt-4 bg-accent-500 px-8 py-5 text-primary-800 text-lg font-semibold hover:bg-accent-600 transition-all"
             >
               Explore our luxury cabins
-            </a>
+            </Link>
           </div>
         </div>
       </div>
