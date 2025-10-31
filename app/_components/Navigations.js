@@ -22,7 +22,7 @@ export default function Navigations() {
         </li>
         <li>
           <Link
-            href="/account"
+            href="/accounts"
             className="hover:text-accent-400 transition-colors"
           >
             Guest area
